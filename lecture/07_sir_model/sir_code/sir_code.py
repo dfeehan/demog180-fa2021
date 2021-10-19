@@ -56,7 +56,7 @@ def sim_epidemic(net, start_nodes=None, innoculated_nodes=None, beta=0.3, draw=F
             plt.figure(networkx.draw(net, 
                                pos=pos,
                                cmap=status_cmap, 
-                               node_color=[status_cmap[net.node[node]['status']] for node in net]));
+                               node_color=[status_cmap[net.nodes[node]['status']] for node in net]));
 
         ## get neighbors of infected nodes
         neighbors = [net.neighbors(x) for x in infected_nodes]
